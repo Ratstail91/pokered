@@ -182,8 +182,8 @@ _PokemonFightingFitText::
 	prompt
 
 _PokemonCenterFarewellText::
-	text "We hope to see"
-	line "you again!"
+	text "Stay safe out"
+	line "there!"
 	done
 
 _CableClubNPCAreaReservedFor2FriendsLinkedByCableText::
