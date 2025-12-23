@@ -131,7 +131,7 @@ ViridianCity_TextPointers:
 	dw_const ViridianCityGambler1Text,                       TEXT_VIRIDIANCITY_GAMBLER1
 	dw_const ViridianCityYoungster2Text,                     TEXT_VIRIDIANCITY_YOUNGSTER2
 	dw_const ViridianCityGirlText,                           TEXT_VIRIDIANCITY_GIRL
-	dw_const ViridianCityOldManSleepyText,                   TEXT_VIRIDIANCITY_OLD_MAN_SLEEPY
+	dw_const ViridianCityOldManDrunkText,                    TEXT_VIRIDIANCITY_OLD_MAN_SLEEPY
 	dw_const ViridianCityFisherText,                         TEXT_VIRIDIANCITY_FISHER
 	dw_const ViridianCityOldManText,                         TEXT_VIRIDIANCITY_OLD_MAN
 	dw_const ViridianCitySignText,                           TEXT_VIRIDIANCITY_SIGN
@@ -201,7 +201,7 @@ ViridianCityGirlText:
 	text_asm
 	CheckEvent EVENT_GOT_POKEDEX
 	jr nz, .got_pokedex
-	ld hl, .HasntHadHisCoffeeYetText
+	ld hl, .StopDrinkingText
 	call PrintText
 	jr .text_script_end
 .got_pokedex
@@ -210,25 +210,25 @@ ViridianCityGirlText:
 .text_script_end
 	jp TextScriptEnd
 
-.HasntHadHisCoffeeYetText:
-	text_far _ViridianCityGirlHasntHadHisCoffeeYetText
+.StopDrinkingText:
+	text_far _ViridianCityGirlStopDrinkingText
 	text_end
 
 .WhenIGoShopText:
 	text_far _ViridianCityGirlWhenIGoShopText
 	text_end
 
-ViridianCityOldManSleepyText:
+ViridianCityOldManDrunkText:
 	text_asm
-	ld hl, .PrivatePropertyText
+	ld hl, .PassedOutText
 	call PrintText
 	call ViridianCityMovePlayerDownScript
 	ld a, SCRIPT_VIRIDIANCITY_PLAYER_MOVING_DOWN
 	ld [wViridianCityCurScript], a
 	jp TextScriptEnd
 
-.PrivatePropertyText:
-	text_far _ViridianCityOldManSleepyPrivatePropertyText
+.PassedOutText:
+	text_far _ViridianCityOldManPassedOutText
 	text_end
 
 ViridianCityFisherText:
@@ -273,7 +273,7 @@ ViridianCityFisherText:
 
 ViridianCityOldManText:
 	text_asm
-	ld hl, .HadMyCoffeeNowText
+	ld hl, .SoberText
 	call PrintText
 	ld c, 2
 	call DelayFrames
@@ -292,8 +292,8 @@ ViridianCityOldManText:
 .done
 	jp TextScriptEnd
 
-.HadMyCoffeeNowText:
-	text_far _ViridianCityOldManHadMyCoffeeNowText
+.SoberText:
+	text_far _ViridianCityOldManSoberText
 	text_end
 
 .KnowHowToCatchPokemonText:

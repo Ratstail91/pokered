@@ -42,11 +42,12 @@ ViridianCityYoungster2CaterpieAndWeedleDescriptionText::
 	line "POISON STING!"
 	done
 
-_ViridianCityGirlHasntHadHisCoffeeYetText::
+_ViridianCityGirlStopDrinkingText::
 	text "Oh Grandpa! Don't"
 	line "be so mean!"
-	cont "He hasn't had his"
-	cont "coffee yet."
+	cont "You should stop"
+	cont "drinking every"
+	cont "night!"
 	done
 
 _ViridianCityGirlWhenIGoShopText::
@@ -57,12 +58,11 @@ _ViridianCityGirlWhenIGoShopText::
 	cont "VIRIDIAN FOREST."
 	done
 
-_ViridianCityOldManSleepyPrivatePropertyText::
-	text "You can't go"
-	line "through here!"
-
-	para "This is private"
-	line "property!"
+_ViridianCityOldManPassedOutText::
+	text "Hey there ladies!"
+	line "How about some"
+	cont "more whiskey?"
+	para "Zzzz..."
 	done
 
 ViridianCityFisherYouCanHaveThisText::
@@ -98,10 +98,12 @@ _ViridianCityFisherTM42NoRoomText::
 	line "stuff already."
 	done
 
-_ViridianCityOldManHadMyCoffeeNowText::
-	text "Ahh, I've had my"
-	line "coffee now and I"
-	cont "feel great!"
+_ViridianCityOldManSoberText::
+	text "×HIC×"
+
+	para "I'm fine, I'm fine."
+	line "Stop fussing over"
+	cont "nothing."
 
 	para "Sure you can go"
 	line "through!"
@@ -136,6 +138,7 @@ _ViridianCityOldManYouNeedToWeakenTheTargetText::
 	text "First, you need"
 	line "to weaken the"
 	cont "target #MON."
+	para "×HIC×"
 	done
 
 _ViridianCitySignText::
