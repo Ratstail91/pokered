@@ -599,7 +599,7 @@ PidgeyEvosMoves:
 	db 0
 ; Learnset
 	db 5, SAND_ATTACK
-	db 12, QUICK_ATTACK
+	db 12, GUST
 	db 19, WHIRLWIND
 	db 28, WING_ATTACK
 	db 36, AGILITY
